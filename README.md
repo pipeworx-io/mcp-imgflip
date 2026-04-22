@@ -1,28 +1,54 @@
 # mcp-imgflip
 
-MCP server for popular meme templates via the [Imgflip API](https://imgflip.com/api). No authentication required.
+Imgflip MCP — wraps Imgflip API (free, no auth for template listing)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_memes` | Get the top 100 most popular meme templates |
 
-## Quickstart (Pipeworx Gateway)
+## Quick Start
 
-```bash
-curl -X POST https://gateway.pipeworx.io/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "tools/call",
-    "params": {
-      "name": "imgflip_get_memes",
-      "arguments": {}
-    },
-    "id": 1
-  }'
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
+
+```json
+{
+  "mcpServers": {
+    "imgflip": {
+      "url": "https://gateway.pipeworx.io/imgflip/mcp"
+    }
+  }
+}
 ```
+
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
+
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
+```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Imgflip data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
