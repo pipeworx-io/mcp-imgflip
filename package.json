@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-imgflip",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Imgflip MCP — wraps Imgflip API (free, no auth for template listing)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-d92acdd3342eaebe1c9341b26d16dce91300ae0acc154f8d3432a322750a4063",
-    "sourceCommit": "1064560fd9dcd0d6fc2606298c2ba244b3a1fbeb"
+    "sourceHash": "v1-043a5341a5c850ad504307fe633bc8e2d3d0b5bc9f80b2c93248ee1e963a1b8e",
+    "sourceCommit": "24e32b525f9c0b2fd7d94b519b08abb108cc11cd"
   }
 }
