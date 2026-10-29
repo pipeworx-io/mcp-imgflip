@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-imgflip",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Imgflip MCP — wraps Imgflip API (free, no auth for template listing)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-imgflip": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "imgflip"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-imgflip.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/imgflip",
   "pipeworx": {
-    "sourceHash": "v1-043a5341a5c850ad504307fe633bc8e2d3d0b5bc9f80b2c93248ee1e963a1b8e",
-    "sourceCommit": "24e32b525f9c0b2fd7d94b519b08abb108cc11cd"
+    "mode": "gateway",
+    "slug": "imgflip",
+    "gatewaySlug": "imgflip",
+    "sourceHash": "v1-96a29ea3b837be5cba77abf152762ba6455aa0254117d556564cd9d2dd5480b7",
+    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
   }
 }
