@@ -1,7 +1,7 @@
 {
   "name": "@pipeworx/mcp-imgflip",
-  "version": "1.1.1",
-  "description": "Imgflip MCP — wraps Imgflip API (free, no auth for template listing)",
+  "version": "1.1.2",
+  "description": "Unofficial Imgflip MCP — wraps Imgflip API (free, no auth for template listing)",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "imgflip",
     "gatewaySlug": "imgflip",
-    "sourceHash": "v1-8db95d9edffd7aaeb2b1738cdc1f17b45cbd178650b793d279a05fea37cf01ef",
-    "sourceCommit": "0ca9712c0ac03bb0121cc7e81b202d0c45ac02ca"
+    "sourceHash": "v1-a806692125c7f39373fd588d5e5750cc897e590a642dc05858329bbf5dcfdf63",
+    "sourceCommit": "874331b0c46b151f9264bd14840631427a7721c1"
   }
 }
